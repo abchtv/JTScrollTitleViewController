@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF5604321DCAD95F001699AD /* JTDifferentHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5604311DCAD95F001699AD /* JTDifferentHomeViewController.m */; };
+		FF5604381DCADD84001699AD /* JTDifferentSingleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5604371DCADD84001699AD /* JTDifferentSingleViewController.m */; };
+		FFE72DFA1DC9E0D5008032D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE72DF91DC9E0D5008032D5 /* main.m */; };
+		FFE72DFD1DC9E0D5008032D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE72DFC1DC9E0D5008032D5 /* AppDelegate.m */; };
+		FFE72E001DC9E0D5008032D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE72DFF1DC9E0D5008032D5 /* ViewController.m */; };
+		FFE72E031DC9E0D5008032D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE72E011DC9E0D5008032D5 /* Main.storyboard */; };
+		FFE72E051DC9E0D5008032D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE72E041DC9E0D5008032D5 /* Assets.xcassets */; };
+		FFE72E081DC9E0D5008032D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE72E061DC9E0D5008032D5 /* LaunchScreen.storyboard */; };
+		FFE72E1B1DC9E237008032D5 /* JTScrollTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE72E181DC9E237008032D5 /* JTScrollTitleLabel.m */; };
+		FFE72E1C1DC9E237008032D5 /* JTScrollTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE72E1A1DC9E237008032D5 /* JTScrollTitleViewController.m */; };
+		FFE72E221DC9E8E0008032D5 /* JTSimilarHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE72E211DC9E8E0008032D5 /* JTSimilarHomeViewController.m */; };
+		FFE72E251DC9E9F2008032D5 /* JTSimilarSingleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE72E241DC9E9F2008032D5 /* JTSimilarSingleViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FF5604301DCAD95F001699AD /* JTDifferentHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTDifferentHomeViewController.h; sourceTree = "<group>"; };
+		FF5604311DCAD95F001699AD /* JTDifferentHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTDifferentHomeViewController.m; sourceTree = "<group>"; };
+		FF5604361DCADD84001699AD /* JTDifferentSingleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTDifferentSingleViewController.h; sourceTree = "<group>"; };
+		FF5604371DCADD84001699AD /* JTDifferentSingleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTDifferentSingleViewController.m; sourceTree = "<group>"; };
+		FFE72DF51DC9E0D5008032D5 /* JTScrollTitleViewControllerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTScrollTitleViewControllerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFE72DF91DC9E0D5008032D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FFE72DFB1DC9E0D5008032D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FFE72DFC1DC9E0D5008032D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FFE72DFE1DC9E0D5008032D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FFE72DFF1DC9E0D5008032D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FFE72E021DC9E0D5008032D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FFE72E041DC9E0D5008032D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFE72E071DC9E0D5008032D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FFE72E091DC9E0D5008032D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFE72E171DC9E237008032D5 /* JTScrollTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTScrollTitleLabel.h; sourceTree = "<group>"; };
+		FFE72E181DC9E237008032D5 /* JTScrollTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTScrollTitleLabel.m; sourceTree = "<group>"; };
+		FFE72E191DC9E237008032D5 /* JTScrollTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTScrollTitleViewController.h; sourceTree = "<group>"; };
+		FFE72E1A1DC9E237008032D5 /* JTScrollTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTScrollTitleViewController.m; sourceTree = "<group>"; };
+		FFE72E201DC9E8E0008032D5 /* JTSimilarHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSimilarHomeViewController.h; sourceTree = "<group>"; };
+		FFE72E211DC9E8E0008032D5 /* JTSimilarHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSimilarHomeViewController.m; sourceTree = "<group>"; };
+		FFE72E231DC9E9F2008032D5 /* JTSimilarSingleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSimilarSingleViewController.h; sourceTree = "<group>"; };
+		FFE72E241DC9E9F2008032D5 /* JTSimilarSingleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSimilarSingleViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFE72DF21DC9E0D5008032D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FFE72DEC1DC9E0D5008032D5 = {
+			isa = PBXGroup;
+			children = (
+				FFE72E161DC9E237008032D5 /* JTScrollTitleViewController */,
+				FFE72DF71DC9E0D5008032D5 /* JTScrollTitleViewControllerSample */,
+				FFE72DF61DC9E0D5008032D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFE72DF61DC9E0D5008032D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFE72DF51DC9E0D5008032D5 /* JTScrollTitleViewControllerSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFE72DF71DC9E0D5008032D5 /* JTScrollTitleViewControllerSample */ = {
+			isa = PBXGroup;
+			children = (
+				FFE72E1D1DC9E844008032D5 /* Sample */,
+				FFE72DFB1DC9E0D5008032D5 /* AppDelegate.h */,
+				FFE72DFC1DC9E0D5008032D5 /* AppDelegate.m */,
+				FFE72DFE1DC9E0D5008032D5 /* ViewController.h */,
+				FFE72DFF1DC9E0D5008032D5 /* ViewController.m */,
+				FFE72E011DC9E0D5008032D5 /* Main.storyboard */,
+				FFE72E041DC9E0D5008032D5 /* Assets.xcassets */,
+				FFE72E061DC9E0D5008032D5 /* LaunchScreen.storyboard */,
+				FFE72E091DC9E0D5008032D5 /* Info.plist */,
+				FFE72DF81DC9E0D5008032D5 /* Supporting Files */,
+			);
+			path = JTScrollTitleViewControllerSample;
+			sourceTree = "<group>";
+		};
+		FFE72DF81DC9E0D5008032D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFE72DF91DC9E0D5008032D5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FFE72E161DC9E237008032D5 /* JTScrollTitleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FFE72E171DC9E237008032D5 /* JTScrollTitleLabel.h */,
+				FFE72E181DC9E237008032D5 /* JTScrollTitleLabel.m */,
+				FFE72E191DC9E237008032D5 /* JTScrollTitleViewController.h */,
+				FFE72E1A1DC9E237008032D5 /* JTScrollTitleViewController.m */,
+			);
+			name = JTScrollTitleViewController;
+			path = ../JTScrollTitleViewController;
+			sourceTree = "<group>";
+		};
+		FFE72E1D1DC9E844008032D5 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				FFE72E1F1DC9E844008032D5 /* Similar */,
+				FFE72E1E1DC9E844008032D5 /* Different */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
+		FFE72E1E1DC9E844008032D5 /* Different */ = {
+			isa = PBXGroup;
+			children = (
+				FF5604301DCAD95F001699AD /* JTDifferentHomeViewController.h */,
+				FF5604311DCAD95F001699AD /* JTDifferentHomeViewController.m */,
+				FF5604361DCADD84001699AD /* JTDifferentSingleViewController.h */,
+				FF5604371DCADD84001699AD /* JTDifferentSingleViewController.m */,
+			);
+			path = Different;
+			sourceTree = "<group>";
+		};
+		FFE72E1F1DC9E844008032D5 /* Similar */ = {
+			isa = PBXGroup;
+			children = (
+				FFE72E201DC9E8E0008032D5 /* JTSimilarHomeViewController.h */,
+				FFE72E211DC9E8E0008032D5 /* JTSimilarHomeViewController.m */,
+				FFE72E231DC9E9F2008032D5 /* JTSimilarSingleViewController.h */,
+				FFE72E241DC9E9F2008032D5 /* JTSimilarSingleViewController.m */,
+			);
+			path = Similar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFE72DF41DC9E0D5008032D5 /* JTScrollTitleViewControllerSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFE72E0C1DC9E0D5008032D5 /* Build configuration list for PBXNativeTarget "JTScrollTitleViewControllerSample" */;
+			buildPhases = (
+				FFE72DF11DC9E0D5008032D5 /* Sources */,
+				FFE72DF21DC9E0D5008032D5 /* Frameworks */,
+				FFE72DF31DC9E0D5008032D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JTScrollTitleViewControllerSample;
+			productName = JTScrollTitleViewControllerSample;
+			productReference = FFE72DF51DC9E0D5008032D5 /* JTScrollTitleViewControllerSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFE72DED1DC9E0D5008032D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = abchtv;
+				TargetAttributes = {
+					FFE72DF41DC9E0D5008032D5 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = M29RZN3ZD5;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FFE72DF01DC9E0D5008032D5 /* Build configuration list for PBXProject "JTScrollTitleViewControllerSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFE72DEC1DC9E0D5008032D5;
+			productRefGroup = FFE72DF61DC9E0D5008032D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFE72DF41DC9E0D5008032D5 /* JTScrollTitleViewControllerSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFE72DF31DC9E0D5008032D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFE72E081DC9E0D5008032D5 /* LaunchScreen.storyboard in Resources */,
+				FFE72E051DC9E0D5008032D5 /* Assets.xcassets in Resources */,
+				FFE72E031DC9E0D5008032D5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFE72DF11DC9E0D5008032D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFE72E001DC9E0D5008032D5 /* ViewController.m in Sources */,
+				FFE72E221DC9E8E0008032D5 /* JTSimilarHomeViewController.m in Sources */,
+				FFE72E1C1DC9E237008032D5 /* JTScrollTitleViewController.m in Sources */,
+				FFE72DFD1DC9E0D5008032D5 /* AppDelegate.m in Sources */,
+				FFE72E1B1DC9E237008032D5 /* JTScrollTitleLabel.m in Sources */,
+				FFE72DFA1DC9E0D5008032D5 /* main.m in Sources */,
+				FFE72E251DC9E9F2008032D5 /* JTSimilarSingleViewController.m in Sources */,
+				FF5604381DCADD84001699AD /* JTDifferentSingleViewController.m in Sources */,
+				FF5604321DCAD95F001699AD /* JTDifferentHomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FFE72E011DC9E0D5008032D5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFE72E021DC9E0D5008032D5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FFE72E061DC9E0D5008032D5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFE72E071DC9E0D5008032D5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FFE72E0A1DC9E0D5008032D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FFE72E0B1DC9E0D5008032D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FFE72E0D1DC9E0D5008032D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M29RZN3ZD5;
+				INFOPLIST_FILE = JTScrollTitleViewControllerSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abchtv.JTScrollTitleViewControllerSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FFE72E0E1DC9E0D5008032D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M29RZN3ZD5;
+				INFOPLIST_FILE = JTScrollTitleViewControllerSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abchtv.JTScrollTitleViewControllerSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFE72DF01DC9E0D5008032D5 /* Build configuration list for PBXProject "JTScrollTitleViewControllerSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFE72E0A1DC9E0D5008032D5 /* Debug */,
+				FFE72E0B1DC9E0D5008032D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFE72E0C1DC9E0D5008032D5 /* Build configuration list for PBXNativeTarget "JTScrollTitleViewControllerSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFE72E0D1DC9E0D5008032D5 /* Debug */,
+				FFE72E0E1DC9E0D5008032D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFE72DED1DC9E0D5008032D5 /* Project object */;
+}
