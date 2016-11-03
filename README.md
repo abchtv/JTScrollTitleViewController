@@ -1,5 +1,4 @@
 [![Version](http://img.shields.io/cocoapods/v/JTScrollTitleViewController.svg)](http://cocoadocs.org/docsets/JTScrollTitleViewController)
-[![Build Status](https://travis-ci.org/abchtv/JTScrollTitleViewController.svg?branch=master)](https://travis-ci.org/abchtv/JTScrollTitleViewController)
 [![Issues](http://img.shields.io/github/issues/abchtv/JTScrollTitleViewController.svg)](https://github.com/abchtv/JTScrollTitleViewController/issues?state=open)
 [![License](https://img.shields.io/cocoapods/l/JTScrollTitleViewController.svg)](http://cocoadocs.org/docsets/JTScrollTitleViewController)
 [![Platform](https://img.shields.io/cocoapods/p/JTScrollTitleViewController.svg)](http://cocoadocs.org/docsets/JTScrollTitleViewController)
