@@ -114,7 +114,7 @@ JTSimilarHomeViewController *vc = [JTSimilarHomeViewController scrollTitleViewCo
 }];
     
 [self.navigationController pushViewController:vc animated:YES];
-``
+```
 
 ###For different child view controllers
 

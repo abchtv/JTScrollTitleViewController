@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'JTScrollTitleViewController'
-    s.version      = '1.0.0'
+    s.version      = ‘1.0.1’
     s.summary      = 'An easy way to use a scrollable title bar in a view controller'
     s.homepage     = 'https://github.com/abchtv/JTScrollTitleViewController'
     s.license      = 'MIT'
