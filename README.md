@@ -95,8 +95,18 @@ To import pod you should add string:
 
 @end
 ```
+##How To Use##
+See the examples.
 
-##Example##
+##Examples##
+###Create a class inherited from JTScrollTitleViewController
+```obj-c
+#import "JTScrollTitleViewController.h"
+
+@interface JTSimilarHomeViewController : JTScrollTitleViewController
+
+@end
+```
 
 ###For similar child view controllers
 
