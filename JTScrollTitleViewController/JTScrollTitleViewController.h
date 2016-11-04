@@ -10,9 +10,6 @@
 
 @interface JTScrollTitleViewController : UIViewController
 
-/**
- *设置顶部标题固定与滑动的阈值
- */
 @property(assign, nonatomic) NSInteger threshold;// default is 0 (3 or 4 depending on screen width)
 
 @property(strong, nonatomic) UIColor *titleViewBgColor;// default is nil (Grey)
@@ -48,6 +45,5 @@
  @return The newly-initialized scroll title view controller
  */
 + (instancetype)scrollTitleViewControllerWithChildVCs:(NSArray *) viewControllers;
-
 
 @end
