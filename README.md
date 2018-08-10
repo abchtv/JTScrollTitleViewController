@@ -51,8 +51,8 @@ To import pod you should add string:
   import JTScrollTitleViewController
 ```
 
-##Comment API ##
-###JTScrollTitleViewController.h
+## Comment API ##
+### JTScrollTitleViewController.h
 ```obj-c
 @interface JTScrollTitleViewController : UIViewController
 
@@ -94,11 +94,11 @@ To import pod you should add string:
 
 @end
 ```
-##How To Use##
+## How To Use ##
 See the examples.
 
-##Examples##
-###Create a class inherited from JTScrollTitleViewController
+## Examples ##
+### Create a class inherited from JTScrollTitleViewController
 ```obj-c
 #import "JTScrollTitleViewController.h"
 
@@ -107,7 +107,7 @@ See the examples.
 @end
 ```
 
-###For similar child view controllers
+### For similar child view controllers
 
 ```obj-c
 // Only 3 titles Fixed Title
@@ -125,7 +125,7 @@ JTSimilarHomeViewController *vc = [JTSimilarHomeViewController scrollTitleViewCo
 [self.navigationController pushViewController:vc animated:YES];
 ```
 
-###For different child view controllers
+### For different child view controllers
 
 ```obj-c
 // Two different types of View Controller(Normal and Table view)
