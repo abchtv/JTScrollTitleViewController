@@ -9,8 +9,7 @@ Get a view controller with a title bar which can be scrolled in the top of its v
 
 Author Email address: jorton0105@outlook.com
 
-
-##Installation##
+## Installation ##
 
 ### CocoaPods
 
