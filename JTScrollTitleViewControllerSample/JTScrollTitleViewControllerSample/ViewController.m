@@ -11,8 +11,13 @@
 #import "JTSimilarSingleViewController.h"
 #import "JTDifferentHomeViewController.h"
 #import "JTDifferentSingleViewController.h"
+#import "JTScrollTitleTools.h"
+#import "JTSttSimilarViewController.h"
+#import "JTSttDifferentViewController.h"
 
 @interface ViewController ()
+
+@property(strong, nonatomic)JTScrollTitleTools *scrollTitleTools;
 
 @end
 
@@ -85,5 +90,20 @@
     
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+
+- (IBAction)similarWithTools:(UIButton *)sender {
+    JTSttSimilarViewController *vc = [JTSttSimilarViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+- (IBAction)differentWithTools:(UIButton *)sender {
+    // Two different types of View Controller(Normal and Table view)
+    // 6(more than 3 or 4) child view controllers, so the titles can be scrolled.
+    JTSttDifferentViewController *vc = [JTSttDifferentViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 @end

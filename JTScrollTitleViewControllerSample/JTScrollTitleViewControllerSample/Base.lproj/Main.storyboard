@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GMT-AI-vsV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GMT-AI-vsV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,23 +22,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iR-g7-Evt">
+                                <rect key="frame" x="82.5" y="164" width="210" height="30"/>
                                 <state key="normal" title="Similar Child VCs (Fixed Tiltes)"/>
                                 <connections>
                                     <action selector="similar" destination="BYZ-38-t0r" eventType="touchUpInside" id="91d-O5-EtH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moW-eT-sLx">
+                                <rect key="frame" x="60" y="254" width="255" height="30"/>
                                 <state key="normal" title="Different Child VCs (Scrollable Titles)"/>
                                 <connections>
                                     <action selector="different" destination="BYZ-38-t0r" eventType="touchUpInside" id="ypF-SZ-qsP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tE2-b8-xJp">
+                                <rect key="frame" x="39" y="434" width="297" height="30"/>
+                                <state key="normal" title="Different Child VCs (Scrollable Titles) - STT"/>
+                                <connections>
+                                    <action selector="differentWithTools:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CdX-jW-WiO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUG-Dh-hYB">
+                                <rect key="frame" x="61" y="344" width="253" height="30"/>
+                                <state key="normal" title="Similar Child VCs (Fixed Tiltes) - STT"/>
+                                <connections>
+                                    <action selector="similarWithTools:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B8o-3b-Lbd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="moW-eT-sLx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.3" id="Ib0-3X-bAD"/>
+                            <constraint firstItem="tE2-b8-xJp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BKl-Sx-7zZ"/>
+                            <constraint firstItem="moW-eT-sLx" firstAttribute="top" secondItem="7iR-g7-Evt" secondAttribute="bottom" constant="60" id="Hay-6J-riw"/>
                             <constraint firstItem="moW-eT-sLx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TGh-ua-gZo"/>
-                            <constraint firstItem="7iR-g7-Evt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.7" id="crs-PV-8aj"/>
+                            <constraint firstItem="XUG-Dh-hYB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y06-kJ-63R"/>
+                            <constraint firstItem="7iR-g7-Evt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="bcN-yM-G1x"/>
+                            <constraint firstItem="tE2-b8-xJp" firstAttribute="top" secondItem="XUG-Dh-hYB" secondAttribute="bottom" constant="60" id="dQf-e2-Esw"/>
+                            <constraint firstItem="XUG-Dh-hYB" firstAttribute="top" secondItem="moW-eT-sLx" secondAttribute="bottom" constant="60" id="dej-5j-tWU"/>
                             <constraint firstItem="7iR-g7-Evt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p30-9b-Xvd"/>
                         </constraints>
                     </view>
@@ -59,6 +81,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lp4-cX-81O">
+                                <rect key="frame" x="166.5" y="323.5" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -85,7 +108,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GMT-AI-vsV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3AF-7D-oAK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

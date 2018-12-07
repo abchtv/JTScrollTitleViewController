@@ -1,14 +1,15 @@
 //
-//  JTScrollTitleViewController.h
-//  Hhstu
+//  JTScrollTitleTools.h
+//  JTScrollTitleViewControllerSample
 //
-//  Created by Jorton on 16/10/27.
-//  Copyright © 2016年 dlrciosdev. All rights reserved.
+//  Created by User on 2018/12/7.
+//  Copyright © 2018 abchtv. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "JTScrollTitleViewController.h"
 
-@interface JTScrollTitleViewController : UIViewController
+@interface JTScrollTitleTools : NSObject
 
 @property(assign, nonatomic) NSInteger threshold;// default is 0 (3 or 4 depending on screen width)
 
@@ -26,24 +27,27 @@
 
 @property(assign, nonatomic) BOOL disallowContentScroll;//default is NO
 
-
 /**
- Initializes an `JTScrollTitleViewController` object with similar child view controllers.
+ Initializes an `JTScrollTitleTools` object with similar child view controllers.
  
+ @param vc The target view controller
  @param titles The titles showed in the top scroll bar.
  @param initialization The initialization defined in the block used to initialize child view controllers with their indexes
  
  @return The newly-initialized scroll title view controller
  */
-+ (instancetype)scrollTitleViewControllerWithTitles:(NSArray *)titles withInitializationForChildVCs:( UIViewController* (^)(NSInteger index)) initialization;
-
++ (instancetype)scrollTitleToolsWithVC:(UIViewController *)vc withTitles:(NSArray *)titles withInitializationForChildVCs:(UIViewController *(^)(NSInteger index))initialization;
 /**
- Initializes an `JTScrollTitleViewController` object with different child view controllers.
+ Initializes an `JTScrollTitleTools` object with different child view controllers.
  
+ @param vc The target view controller
  @param viewControllers The viewControllers which will become child view controllers of this scroll title view controller
  
  @return The newly-initialized scroll title view controller
  */
-+ (instancetype)scrollTitleViewControllerWithChildVCs:(NSArray *)viewControllers;
++ (instancetype)scrollTitleToolsWithVC:(UIViewController *)vc withChildVCs:(NSArray *) viewControllers;
+
+- (void)setupUI;
 
 @end
+

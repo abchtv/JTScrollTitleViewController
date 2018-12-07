@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1F5D9AB31DCC304300E95841 /* JTScrollTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D9AB21DCC304300E95841 /* JTScrollTitleLabel.m */; };
+		CED85EED21BA550E00D0341F /* JTScrollTitleTools.m in Sources */ = {isa = PBXBuildFile; fileRef = CED85EEC21BA550E00D0341F /* JTScrollTitleTools.m */; };
+		CED85EF721BA6EDB00D0341F /* JTSttDifferentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED85EF621BA6EDA00D0341F /* JTSttDifferentViewController.m */; };
+		CED85EFA21BA6EF900D0341F /* JTSttSimilarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED85EF921BA6EF900D0341F /* JTSttSimilarViewController.m */; };
 		FF5604321DCAD95F001699AD /* JTDifferentHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5604311DCAD95F001699AD /* JTDifferentHomeViewController.m */; };
 		FF5604381DCADD84001699AD /* JTDifferentSingleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5604371DCADD84001699AD /* JTDifferentSingleViewController.m */; };
 		FFE72DFA1DC9E0D5008032D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE72DF91DC9E0D5008032D5 /* main.m */; };
@@ -24,6 +27,12 @@
 /* Begin PBXFileReference section */
 		1F5D9AB11DCC304300E95841 /* JTScrollTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTScrollTitleLabel.h; sourceTree = "<group>"; };
 		1F5D9AB21DCC304300E95841 /* JTScrollTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTScrollTitleLabel.m; sourceTree = "<group>"; };
+		CED85EEB21BA550E00D0341F /* JTScrollTitleTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTScrollTitleTools.h; sourceTree = "<group>"; };
+		CED85EEC21BA550E00D0341F /* JTScrollTitleTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTScrollTitleTools.m; sourceTree = "<group>"; };
+		CED85EF521BA6EDA00D0341F /* JTSttDifferentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTSttDifferentViewController.h; sourceTree = "<group>"; };
+		CED85EF621BA6EDA00D0341F /* JTSttDifferentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTSttDifferentViewController.m; sourceTree = "<group>"; };
+		CED85EF821BA6EF900D0341F /* JTSttSimilarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTSttSimilarViewController.h; sourceTree = "<group>"; };
+		CED85EF921BA6EF900D0341F /* JTSttSimilarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTSttSimilarViewController.m; sourceTree = "<group>"; };
 		FF5604301DCAD95F001699AD /* JTDifferentHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTDifferentHomeViewController.h; sourceTree = "<group>"; };
 		FF5604311DCAD95F001699AD /* JTDifferentHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTDifferentHomeViewController.m; sourceTree = "<group>"; };
 		FF5604361DCADD84001699AD /* JTDifferentSingleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTDifferentSingleViewController.h; sourceTree = "<group>"; };
@@ -64,6 +73,17 @@
 				1F5D9AB21DCC304300E95841 /* JTScrollTitleLabel.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CED85EEE21BA6E1200D0341F /* ScrollTitleTools */ = {
+			isa = PBXGroup;
+			children = (
+				CED85EF821BA6EF900D0341F /* JTSttSimilarViewController.h */,
+				CED85EF921BA6EF900D0341F /* JTSttSimilarViewController.m */,
+				CED85EF521BA6EDA00D0341F /* JTSttDifferentViewController.h */,
+				CED85EF621BA6EDA00D0341F /* JTSttDifferentViewController.m */,
+			);
+			path = ScrollTitleTools;
 			sourceTree = "<group>";
 		};
 		FFE72DEC1DC9E0D5008032D5 = {
@@ -114,6 +134,8 @@
 				1F5D9AB01DCC300700E95841 /* View */,
 				FFE72E191DC9E237008032D5 /* JTScrollTitleViewController.h */,
 				FFE72E1A1DC9E237008032D5 /* JTScrollTitleViewController.m */,
+				CED85EEB21BA550E00D0341F /* JTScrollTitleTools.h */,
+				CED85EEC21BA550E00D0341F /* JTScrollTitleTools.m */,
 			);
 			name = JTScrollTitleViewController;
 			path = ../JTScrollTitleViewController;
@@ -122,6 +144,7 @@
 		FFE72E1D1DC9E844008032D5 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				CED85EEE21BA6E1200D0341F /* ScrollTitleTools */,
 				FFE72E1F1DC9E844008032D5 /* Similar */,
 				FFE72E1E1DC9E844008032D5 /* Different */,
 			);
@@ -181,7 +204,7 @@
 				TargetAttributes = {
 					FFE72DF41DC9E0D5008032D5 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = M29RZN3ZD5;
+						DevelopmentTeam = 5Q9UFTMSAP;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -224,7 +247,10 @@
 			files = (
 				FFE72E001DC9E0D5008032D5 /* ViewController.m in Sources */,
 				FFE72E221DC9E8E0008032D5 /* JTSimilarHomeViewController.m in Sources */,
+				CED85EF721BA6EDB00D0341F /* JTSttDifferentViewController.m in Sources */,
 				FFE72E1C1DC9E237008032D5 /* JTScrollTitleViewController.m in Sources */,
+				CED85EFA21BA6EF900D0341F /* JTSttSimilarViewController.m in Sources */,
+				CED85EED21BA550E00D0341F /* JTScrollTitleTools.m in Sources */,
 				FFE72DFD1DC9E0D5008032D5 /* AppDelegate.m in Sources */,
 				FFE72DFA1DC9E0D5008032D5 /* main.m in Sources */,
 				FFE72E251DC9E9F2008032D5 /* JTSimilarSingleViewController.m in Sources */,
@@ -350,7 +376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = M29RZN3ZD5;
+				DEVELOPMENT_TEAM = 5Q9UFTMSAP;
 				INFOPLIST_FILE = JTScrollTitleViewControllerSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -363,7 +389,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = M29RZN3ZD5;
+				DEVELOPMENT_TEAM = 5Q9UFTMSAP;
 				INFOPLIST_FILE = JTScrollTitleViewControllerSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

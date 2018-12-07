@@ -1,9 +1,9 @@
 //
-//  JTScrollTitleViewController.m
-//  Hhstu
+//  JTScrollTitleTools.m
+//  JTScrollTitleViewControllerSample
 //
-//  Created by Jorton on 16/10/27.
-//  Copyright © 2016年 dlrciosdev. All rights reserved.
+//  Created by User on 2018/12/7.
+//  Copyright © 2018 abchtv. All rights reserved.
 //
 
 #define UIColorFromRGBAlpha(rgbValue,alphaValue) [UIColor \
@@ -17,10 +17,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]
 #define MyTitleViewBgColor UIColorFromRGBAlpha(0xF2F2F2, 1.f)
 #define MyBarViewColor UIColorFromRGBAlpha(0xFD9F20, 1.f)
 
-#import "JTScrollTitleViewController.h"
+#import "JTScrollTitleTools.h"
 #import "JTScrollTitleLabel.h"
 
-@interface JTScrollTitleViewController ()<UIScrollViewDelegate>
+@interface JTScrollTitleTools ()<UIScrollViewDelegate>
 
 @property(weak, nonatomic) UIScrollView *titleScrollView;
 @property(weak, nonatomic) UIScrollView *contentScrollView;
@@ -31,57 +31,58 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]
 @property(strong, nonatomic) UIViewController* (^initialization)(NSInteger);
 @property(strong, nonatomic) NSArray *viewControllers;
 
+@property(strong, nonatomic) UIViewController *viewController;
+
 @end
 
-@implementation JTScrollTitleViewController
+@implementation JTScrollTitleTools
 
-- (instancetype)initWithTitles:(NSArray *)titles withInitializeChildVcBlock:(UIViewController *(^)(NSInteger index))initialization {
+- (instancetype)initWithVC:(UIViewController *)vc withTitles:(NSArray *)titles withInitializeChildVcBlock:(UIViewController *(^)(NSInteger index))initialization {
     if (self = [super init]) {
         _titleList =  [NSArray arrayWithArray:titles];
         self.initialization = initialization;
+        self.viewController = vc;
     }
     return self;
 }
 
-- (instancetype)initWithChildVCs:(NSArray *) viewControllers{
+- (instancetype)initWithVC:(UIViewController *)vc withChildVCs:(NSArray *) viewControllers{
     if (self = [super init]) {
+        self.viewController = vc;
         self.viewControllers = [NSArray arrayWithArray:viewControllers];
     }
     return self;
 }
 
-+ (instancetype)scrollTitleViewControllerWithTitles:(NSArray *)titles withInitializationForChildVCs:(UIViewController *(^)(NSInteger index))initialization{
-    return [[self alloc]initWithTitles:titles withInitializeChildVcBlock:initialization];
++ (instancetype)scrollTitleToolsWithVC:(UIViewController *)vc withTitles:(NSArray *)titles withInitializationForChildVCs:(UIViewController *(^)(NSInteger index))initialization {
+    return [[self alloc]initWithVC:vc withTitles:titles withInitializeChildVcBlock:initialization];
 }
 
-+ (instancetype)scrollTitleViewControllerWithChildVCs:(NSArray *) viewControllers {
-    return [[self alloc]initWithChildVCs:viewControllers];
++ (instancetype)scrollTitleToolsWithVC:(UIViewController *)vc withChildVCs:(NSArray *) viewControllers {
+    return [[self alloc]initWithVC:vc withChildVCs:viewControllers];
 }
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.extendedLayoutIncludesOpaqueBars = NO;
-    self.automaticallyAdjustsScrollViewInsets = NO;
+- (void)setupUI {
+    self.viewController.edgesForExtendedLayout = UIRectEdgeNone;
+    self.viewController.extendedLayoutIncludesOpaqueBars = NO;
+    self.viewController.automaticallyAdjustsScrollViewInsets = NO;
     
     self.titleViewHeight = self.titleViewHeight ? self.titleViewHeight : 36;
     self.barHeight = self.barHeight ? self.barHeight : 3;
     
-    self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.viewController.view.backgroundColor = [UIColor whiteColor];
     
     UIScrollView *titleScroll = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, _titleViewHeight)];
     _titleScrollView = titleScroll;
     _titleScrollView.showsHorizontalScrollIndicator = NO;
     _titleScrollView.showsVerticalScrollIndicator = NO;
     
-    [self.view addSubview:_titleScrollView];
+    [self.viewController.view addSubview:_titleScrollView];
     
     CGFloat extraHeight;
     
-    extraHeight = self.navigationController ? 64 : 20;
+    extraHeight = self.viewController.navigationController ? 64 : 20;
     
     UIScrollView *contentScroll = [[UIScrollView alloc]initWithFrame:CGRectMake(0, _titleViewHeight, ScreenWidth, ScreenHeight - extraHeight - _titleViewHeight)];
     _contentScrollView = contentScroll;
@@ -92,7 +93,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]
     _contentScrollView.delegate = self;
     _contentScrollView.scrollEnabled = !_disallowContentScroll;
     
-    [self.view addSubview:_contentScrollView];
+    [self.viewController.view addSubview:_contentScrollView];
     
     [self setupChildViewControllers];
     [self setupTitles];
@@ -103,11 +104,11 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]
     if (!self.viewControllers) {
         for (NSInteger i = 0; i < self.titleList.count; i++) {
             UIViewController *vc = _initialization(i);
-            [self addChildViewController:vc];
+            [self.viewController addChildViewController:vc];
         }
     }else{
         for (NSInteger i = 0; i < self.viewControllers.count; i++) {
-             [self addChildViewController:self.viewControllers[i]];
+            [self.viewController addChildViewController:self.viewControllers[i]];
         }
     }
 }
@@ -127,14 +128,14 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]
     CGFloat labelH = self.titleScrollView.frame.size.height;
     
     for (NSInteger i = 0; i < titleCount ; i++) {
-
+        
         JTScrollTitleLabel *label = [[JTScrollTitleLabel alloc] init];
         label.unselectedlabelColor = self.unselectedlabelColor;
         label.selectedlabelColor = self.selectedlabelColor;
         label.labelFont = self.labelFont;
         label.labelScaleRate = self.labelScaleRate;
         
-        label.text = self.viewControllers ? [self.childViewControllers[i] title] : self.titleList[i];
+        label.text = self.viewControllers ? [self.viewController.childViewControllers[i] title] : self.titleList[i];
         
         CGFloat labelX = i * labelW;
         label.frame = CGRectMake(labelX, labelY, labelW, labelH);
@@ -189,7 +190,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]
         if (otherLabel != label) otherLabel.scale = 0.0;
     }
     
-    UIViewController *willShowVc = self.childViewControllers[index];
+    UIViewController *willShowVc = self.viewController.childViewControllers[index];
     
     if ([willShowVc isViewLoaded]) return;
     
@@ -225,6 +226,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]
     leftLabel.scale = leftScale;
     rightLabel.scale = rightScale;
 }
+
 
 
 @end
