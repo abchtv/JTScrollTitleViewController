@@ -98,6 +98,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]
     [self setupChildViewControllers];
     [self setupTitles];
     [self scrollViewDidEndScrollingAnimation:self.contentScrollView];
+    [self selectToIndex];
 }
 
 - (void)setupChildViewControllers {
@@ -155,6 +156,14 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]
     
     self.titleScrollView.contentSize = titleCount <= threshold ? CGSizeMake(ScreenWidth, 0) : CGSizeMake(titleCount * labelW, 0);
     self.contentScrollView.contentSize = CGSizeMake(titleCount * ScreenWidth, 0);
+}
+
+- (void)selectToIndex {
+    if (self.selectedIndex == 0) return;
+    if (self.selectedIndex > self.titleList.count - 1) return;
+    CGPoint offset = self.contentScrollView.contentOffset;
+    offset.x = self.selectedIndex * self.contentScrollView.frame.size.width;
+    [self.contentScrollView setContentOffset:offset animated:YES];
 }
 
 - (void)labelClick:(UITapGestureRecognizer *)tap {

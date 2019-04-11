@@ -57,6 +57,7 @@
     self.scrollTitleTools.selectedlabelColor = [UIColor redColor];
     self.scrollTitleTools.unselectedlabelColor = [UIColor lightGrayColor];
     self.scrollTitleTools.labelScaleRate = 0.2;
+    self.scrollTitleTools.selectedIndex = 2;
 
     [self.scrollTitleTools setupUI];
 }

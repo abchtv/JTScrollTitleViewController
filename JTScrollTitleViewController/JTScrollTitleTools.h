@@ -27,6 +27,8 @@
 
 @property(assign, nonatomic) BOOL disallowContentScroll;//default is NO
 
+@property(assign, nonatomic) NSInteger selectedIndex;//default is 0
+
 /**
  Initializes an `JTScrollTitleTools` object with similar child view controllers.
  
