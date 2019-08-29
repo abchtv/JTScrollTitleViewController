@@ -9,6 +9,8 @@ Get a view controller with a title bar which can be scrolled in the top of its v
 
 Author Email address: jorton0105@outlook.com
 
+![img](https://raw.githubusercontent.com/abchtv/JTScrollTitleViewController/master/images/stt-gif02.gif)
+
 ## Installation ##
 
 ### CocoaPods
@@ -109,6 +111,8 @@ See the examples.
 
 ### For similar child view controllers
 
+#### 1. Use "JTScrollTitleViewController"
+
 ```obj-c
 // Only 3 titles Fixed Title
 // threshold default is 0 (3 or 4 depending on screen width)
@@ -125,7 +129,40 @@ JTSimilarHomeViewController *vc = [JTSimilarHomeViewController scrollTitleViewCo
 [self.navigationController pushViewController:vc animated:YES];
 ```
 
+#### 2. Use "JTScrollTitleTools" - Recommended
+
+```obj-c
+// In your own custom view controller, set the property of JTScrollTitleTools, and initialize it in the method of viewDidLoad
+
+@interface JTSttSimilarViewController ()
+
+@property(strong, nonatomic)JTScrollTitleTools *scrollTitleTools;
+
+@end
+
+@implementation JTSttSimilarViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.title = @"Similar-STT";
+    
+    NSArray *array = @[@"Title1",@"Title2",@"Title3"];
+    self.scrollTitleTools = [JTScrollTitleTools scrollTitleToolsWithVC:self withTitles:array withInitializationForChildVCs:^UIViewController *(NSInteger index) {
+        JTSimilarSingleViewController *svc = [[JTSimilarSingleViewController alloc]initWithStyle:UITableViewStylePlain];
+        svc.title = array[index];
+        return svc;
+    }];
+    [self.scrollTitleTools setupUI];
+}
+
+```
+
+![img](https://raw.githubusercontent.com/abchtv/JTScrollTitleViewController/master/images/stt-gif01.gif)
+
 ### For different child view controllers
+
+#### 1. Use "JTScrollTitleViewController"
 
 ```obj-c
 // Two different types of View Controller(Normal and Table view)
@@ -166,3 +203,65 @@ vc.labelScaleRate = 0.2;
     
 [self.navigationController pushViewController:vc animated:YES];
 ```
+
+#### 2. Use "JTScrollTitleTools" - Recommended
+
+```obj-c
+
+// In your own custom view controller, set the property of JTScrollTitleTools, and initialize it in the method of viewDidLoad
+
+@interface JTSttDifferentViewController ()
+
+@property(strong, nonatomic)JTScrollTitleTools *scrollTitleTools;
+
+@end
+
+@implementation JTSttDifferentViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.title = @"Different-STT";
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    JTDifferentSingleViewController *vc1 = [mainStoryboard instantiateViewControllerWithIdentifier:@"DifferentSingleViewController"];
+    vc1.title = @"Normal1";
+    
+    JTSimilarSingleViewController *svc1 = [[JTSimilarSingleViewController alloc]initWithStyle:UITableViewStylePlain];
+    svc1.title = @"TableView1";
+    
+    JTDifferentSingleViewController *vc2 = [mainStoryboard instantiateViewControllerWithIdentifier:@"DifferentSingleViewController"];
+    vc2.title = @"Normal2";
+    
+    JTSimilarSingleViewController *svc2 = [[JTSimilarSingleViewController alloc]initWithStyle:UITableViewStylePlain];
+    svc2.title = @"TableView2";
+    
+    JTDifferentSingleViewController *vc3 =  [mainStoryboard instantiateViewControllerWithIdentifier:@"DifferentSingleViewController"];
+    vc3.title = @"Normal3";
+    
+    JTSimilarSingleViewController *svc3 = [[JTSimilarSingleViewController alloc]initWithStyle:UITableViewStylePlain];
+    svc3.title = @"TableView3";
+    
+    self.scrollTitleTools = [JTScrollTitleTools scrollTitleToolsWithVC:self withChildVCs:@[vc1,svc1,vc2,svc2,vc3,svc3]];
+    
+    self.scrollTitleTools.titleViewBgColor = [UIColor cyanColor];
+    self.scrollTitleTools.titleViewHeight = 44;
+    
+    self.scrollTitleTools.barViewColor = [UIColor redColor];
+    self.scrollTitleTools.barHeight = 5;
+    self.scrollTitleTools.barViewRate = 0.3;
+    
+    self.scrollTitleTools.labelFont = [UIFont systemFontOfSize:15];
+    self.scrollTitleTools.selectedlabelColor = [UIColor redColor];
+    self.scrollTitleTools.unselectedlabelColor = [UIColor lightGrayColor];
+    self.scrollTitleTools.labelScaleRate = 0.2;
+    self.scrollTitleTools.selectedIndex = 2;
+
+    [self.scrollTitleTools setupUI];
+}
+
+@end
+```
+
+
+![img](https://raw.githubusercontent.com/abchtv/JTScrollTitleViewController/master/images/stt-gif02.gif)
