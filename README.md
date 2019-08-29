@@ -7,6 +7,8 @@
 # JTScrollTitleViewController
 Get a view controller with a title bar which can be scrolled in the top of its view
 
+(关键字：滚动标题，滚动标题栏，滚动，顶部，顶部标题，顶部标题栏)
+
 Author Email address: jorton0105@outlook.com
 
 ![img](https://raw.githubusercontent.com/abchtv/JTScrollTitleViewController/master/images/stt-gif02.gif)
